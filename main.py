@@ -3,6 +3,7 @@ import json
 import datetime
 import sys
 import io
+import os
 
 # 改变标准输出的默认编码 不知道为啥windows上乱码
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')
@@ -12,8 +13,8 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 
 ## Part I 必需填写
 
-sid = ""  # 学号
-pwd = ""  # 密码
+sid = os.environ["USERNAME"]  # 学号
+pwd = os.environ["PASSWORD"]  # 密码
 heath_status = "健康"  # 疫情诊断
 
 ###############################
@@ -29,7 +30,7 @@ heath_status = "健康"  # 疫情诊断
 
 mydata = {
     "xh": sid,  # 学号 （无需手动填写）
-    "sfhx": "y",  # 是否回校 (y/n)
+    "sfhx": "n",  # 是否回校 (y/n)
 
     # 回校需填写：
     "hxsj": "20200528 150000",  # 回校时间，格式为“20200409 170200” 2020年4月9日17点02分00秒
@@ -40,10 +41,10 @@ mydata = {
     "sfcx": "n",  # 是否出校 (y/n) （当日是否离开过学校）
 
     # 不在校需填写：
-    "dqszdxxdz": "",  # 当前所在地详细地址
-    "dqszdsm": "",  # 当前所在地省编号
-    "dqszddjsm": "",  # 当前所在地市编号
-    "dqszdxjsm": "",  # 当前所在地区编号
+    "dqszdxxdz": "马连洼街道",  # 当前所在地详细地址
+    "dqszdsm": "11",  # 当前所在地省编号
+    "dqszddjsm": "01",  # 当前所在地市编号
+    "dqszdxjsm": "08",  # 当前所在地区编号
 
     "sfmjqzbl": "n",  # 是否与确诊病例密接，尚未解除观察
     "sfmjmjz": "n",  # 是否与确诊病例密接者密接，尚未解除观察
