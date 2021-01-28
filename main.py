@@ -100,7 +100,7 @@ mydata = {
     "text": r.text,
 }
 FC_url = "https://sc.ftqq.com/"+fckey+".send"
-r = sess.post(FC_url, data=r.text)
+r = sess.post(FC_url, data=mydata)
 # TODO 考虑给自己邮箱发消息告知填报情况
 
 
