@@ -28,5 +28,6 @@ jobs:
       env:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
+        FCKEY: ${{ secrets.FCKEY }}
 
       run: python main.py
