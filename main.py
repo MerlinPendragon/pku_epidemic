@@ -94,6 +94,9 @@ r = sess.get(link0)
 Tb_url = "https://ssop.pku.edu.cn/stuAffair/edu/pku/stu/sa/jpf/yqfk/stu/saveMrtb.do"
 r = sess.post(Tb_url, data=mydata)
 print(r.text)
+
+FC_url = "https://sc.ftqq.com/"+os.environ["FCKEY"]+".send"
+r = sess.post(FC_url, data=r.text)
 # TODO 考虑给自己邮箱发消息告知填报情况
 
 
