@@ -15,6 +15,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 
 sid = os.environ["USERNAME"]  # 学号
 pwd = os.environ["PASSWORD"]  # 密码
+fckey = os.environ["FCKEY"]
 heath_status = "健康"  # 疫情诊断
 
 ###############################
@@ -95,7 +96,7 @@ Tb_url = "https://ssop.pku.edu.cn/stuAffair/edu/pku/stu/sa/jpf/yqfk/stu/saveMrtb
 r = sess.post(Tb_url, data=mydata)
 print(r.text)
 
-FC_url = "https://sc.ftqq.com/"+os.environ["FCKEY"]+".send"
+FC_url = "https://sc.ftqq.com/"+fckey+".send"
 r = sess.post(FC_url, data=r.text)
 # TODO 考虑给自己邮箱发消息告知填报情况
 
