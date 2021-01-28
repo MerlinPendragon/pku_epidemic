@@ -62,7 +62,7 @@ mydata = {
     "dwdzxx": "",
     "dwjd": "",
     "dwwd": "",
-    "sfdrfj": "",
+    "sfdrfj": "n",
     "chdfj": "",
     "simstoken": "",
     "jkm": "绿码",  # 健康码
